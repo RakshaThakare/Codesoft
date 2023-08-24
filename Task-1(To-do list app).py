@@ -1,13 +1,13 @@
 from tkinter import *
 from tkinter.font import Font
 
-root = Tk()
-root.configure(background="Orange")
-root.title('To-Do List Application')
-root.geometry("750x500")
+meta = Tk()
+meta.configure(background="Orange")
+meta.title('To-Do List Application')
+meta.geometry("750x500")
 
 my_font = Font(family="Times New Roman", size=20, weight="bold")
-my_frame = Frame(root)
+my_frame = Frame(meta)
 my_frame.pack(pady=10)
 
 my_list = Listbox(my_frame, font=my_font, width=40, height=7, bg="yellow", bd=0, fg="red", highlightthickness=0, selectbackground="red", activestyle="none")
@@ -18,10 +18,10 @@ my_scrollbar.pack(side=RIGHT, fill=BOTH)
 my_list.config(yscrollcommand=my_scrollbar.set)
 my_scrollbar.config(command=my_list.yview)
 
-my_entry = Entry(root, font=("Times New Roman", 22), width=26, bg='yellow')
+my_entry = Entry(meta, font=("Times New Roman", 22), width=26, bg='yellow')
 my_entry.pack(pady=20)
 
-button_frame = Frame(root, bg='orange')
+button_frame = Frame(meta, bg='orange')
 button_frame.pack(pady=20)
 
 def delete_item():
@@ -63,6 +63,6 @@ cross_off_button.grid(row=1, column=0,padx=10)
 uncross_button.grid(row=1, column=2, padx=10)
 delete_crossed_button.grid(row=1, column=4)
 
-root.mainloop()
+meta.mainloop()
 
 

@@ -1,9 +1,9 @@
 import tkinter as tk
 
-root = tk.Tk()
-root.resizable(0, 0)
-root.title("Simple Calculator")
-root.geometry("312x324")
+meta = tk.Tk()
+meta.resizable(0, 0)
+meta.title("Simple Calculator")
+meta.geometry("312x324")
  
 input_value = ""
 
@@ -27,7 +27,7 @@ def equal_button_action():
     input_value = ""
 
   
-input_frame = tk.Frame(root, width=312, height=50, bd=0, highlightbackground="black", highlightcolor="black", highlightthickness=2)
+input_frame = tk.Frame(meta, width=312, height=50, bd=0, highlightbackground="black", highlightcolor="black", highlightthickness=2)
   
 input_frame.pack(side = tk.TOP)
   
@@ -37,7 +37,7 @@ input_field.grid(row=0, column=0)
   
 input_field.pack(ipady=10)
   
-btns_frame = tk.Frame(root, width=312, height=272.5, bg="black")
+btns_frame = tk.Frame(meta, width=312, height=272.5, bg="black")
   
 btns_frame.pack()
 
@@ -79,4 +79,4 @@ point_btn = tk.Button(btns_frame, text = ".", fg = "black", width = 10, height =
   
 equals_btn = tk.Button(btns_frame, text = "=", fg = "black", width = 10, height = 3, bd = 0, bg = "green", cursor = "hand2", command = lambda: equal_button_action()).grid(row = 4, column = 3, padx = 1, pady = 1)
 
-root.mainloop()
+meta.mainloop()
